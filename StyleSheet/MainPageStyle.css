@@ -1,63 +1,30 @@
-body {
-
-     font-family: Verdana, Geneva, Tahoma, sans-serif;
-     margin: 0px;
-     background-color: #8d72de;
-     min-height: 100vh;
-}
-.TopBar{
-     z-index: 25;
-     position:fixed;
-     display: flex;
-     flex-direction: row;
-     align-items: center;
-     padding: 5px;
-     background-color:#e8e8e8;
-     box-shadow: 1px 1px 20px gray;
-     width: 100vw;
-     height: 40px;
-     border-bottom: 2px solid #0000008b;
-}
 .Conteudo {
      z-index: 5;
      position: relative;
-     top: 40px;
+     margin-top: 40px; /* Usa margin-top em vez de top para empurrar o fluxo normal */
 }
 .SessaoPrincipal{
      background-color: #6e6e6e;
-     height: 1000px;
-}
-
-.SeparadorVertical_TOPBAR {
-     margin-left: 5px;
-     margin-right: 10px;
-     background-color: rgba(0, 0, 0, 0.1);
-     height: calc(70% - 4px);
-     width: 1px;
-}
-
-.tobarItens{
-     height: 100%;
-     display: flex;
-     flex-direction: row;
-     align-items: center;
+     height: 800px;
 }
 
 /* Sessao Principal */
 .SPRINCIPAL_DIREITA {
-     background-color:silver;
-     width: calc(50% - 30dvh);
+     padding: 20px 30px;
+     background-color:gainsboro;
+     width: calc(35%);
      height: 100%;
 }
+
 /* Sessao do rodape */
 .Footer{
      padding: 10px 20px;
      display: flex;
      align-items: center;
-     justify-content: center;
-     border-top:1px solid #514168;
-     background-color:#7d649f;
-     height: 200px;
+     justify-content:flex-start;
+     border-top:1px solid #321b51;
+     background-color:#452a61;
+     height: 120px;
 }
 .SeparadorVertical_FOOTER{
      background-color: #0201023e;
@@ -66,56 +33,49 @@ body {
      margin-left: 10px;
 }
 .imgs_fotter{
-     height: 40%;
+     height: 50px;
      width: auto;
      object-fit: contain;
 }
-/* Visual2 */
 
-.tobarItens a{
+/*  */
+.FT1{
      display: flex;
      align-items: center;
-     justify-content: center;
-
      height: 100%;
-     text-decoration: none;
-     color:dimgray;
-     margin-right: 10px;
-     transition: cubic-bezier(0.77, 0, 0.175, 1);
-     transition-duration: .2s;
 }
-.tobarItens a:hover{
-     border-bottom: 1px solid black;
-     color:black;
-}
-.tobarItens a:active{
-     border-radius: 5%;
-     border-bottom: 4px solid rgba(0, 0, 0, 0.389);
-     color:cadetblue;
-     transition-duration: .1s;
-}
-.Link_Logo{
-     cursor: default;
-     height: 80%;
+.FT2{
+     color: white;
+     margin: 0px;
+     padding: 10px;
      display: flex;
-     align-items: center;
+     flex-direction: column;
+     list-style: none;
+     align-items: flex-start;
+     height: 100%;
+}
+
+#Para_Aprender{
+     border-radius: 40px;
      text-decoration: none;
-     background: transparent !important; /* Mantém sua zona limpa */
+     color: white;
+     background-color: #755399;
+     padding: 10px;
+     white-space: nowrap;
+}
+#Para_Aprender:hover{
+     transition-duration: .2s;
+     color: white;
+     background-color: #895bba;
+}
+#Para_Aprender:active{
+     transition-duration: .2s;
+     color: white;
+     background-color: #4d316a;
 }
 
-/* ID's */
-
-#TopBar_logoimg{
-     height: 80%;
-     width: auto;
+.WSaleatorio{
+     height: auto;
+     width: 100%;
      object-fit: contain;
-}
-#TopBar_logoimg:hover{
-     border-radius: 20dvh;
-     background-color: #611db42a;
-}
-#TopBar_logoimg:active{
-     border-radius: 20dvh;
-     background-color: #4b36657c;
-     transition: all 0.1s ease; 
 }
