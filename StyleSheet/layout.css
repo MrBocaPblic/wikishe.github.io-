@@ -1,9 +1,12 @@
+.Conteudo {
+     z-index: 5;
+     position: relative;
+     top: 40px;
+}
 body {
-
      font-family: Verdana, Geneva, Tahoma, sans-serif;
      margin: 0px;
      background-color: #8d72de;
-     min-height: 100vh;
 }
 .TopBar {
      z-index: 25;
@@ -18,9 +21,8 @@ body {
      background-color: #e8e8e8;
      box-shadow: 1px 1px 20px gray;
      
-     /* CORREÇÃO AQUI: */
-     width: 100%; /* Em vez de 100vw para evitar scroll horizontal */
-     box-sizing: border-box; /* Garante que o padding não aumente os 100% */
+     width: 100%;
+     box-sizing: border-box;
      
      height: 40px;
      border-bottom: 2px solid #0000008b;
@@ -118,4 +120,10 @@ body {
      background-color: rgba(0, 0, 0, 0.1);
      height: calc(70% - 4px);
      width: 1px;
+}
+
+.nowrap{
+     word-wrap: break-word;      /* Quebra palavras longas para caber na largura */
+    overflow-wrap: break-word;  /* Versão moderna do word-wrap */
+    word-break: break-word;
 }

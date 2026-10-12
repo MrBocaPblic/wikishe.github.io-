@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>WikiShe - AprenderSobre</title>
      <link rel="stylesheet" href="../StyleSheet/layout.css">
+     <link rel="stylesheet" href="AprenderPageStyle.css">
+     <link rel="icon" type="image/x-icon" href="../logo_b.ico">
+     <script src="https://unpkg.com/globe.gl"></script>
+
 </head>
+
 <body>
+     <!-- BARRA DO TOPO (wikishe | inicio | descobrir | quiz | sobre ) -->
      <div class="TopBar">
           <a href="/" class="Link_Logo">
                <img id="TopBar_logoimg" src="../Assets/Tema Branco/logo.WIKISHE_TEMABRANCO.png" alt="WikiShe">
@@ -15,11 +22,37 @@
           <div class="SeparadorVertical_TOPBAR"></div>
           <div class="tobarItens">
                <a href="../">Inicio</a>
-               <a href="#">Descobrir</a>
-               <a href="#">Quiz</a>
-               <a href="#">Sobre</a>
+               <a href="../Aprender/">Descobrir</a>
+               <a href="../Quiz/">Quiz</a>
           </div>
           <div class="SeparadorVertical_TOPBAR"></div>
      </div>
+     <main class="espaco1">
+          <div class="SessaoApresentacao">
+               <div id="globo-3d"></div>
+               <div class="nowrap" id="Localizacao">
+                    <p>Localização principal</p>
+                    <hr>
+                    <br>
+                    <p id="paissel">País:</p>
+                    <br>
+                    <p id="cidadesel">Cidade:</p>
+               </div>
+               <div id="INFO">
+                    <a href="#">
+                         <img id="ImagemDaMulher" height="100px" src="../Assets/Tema Preto/logo.WIKISHE_MINIMIZE_temapreto.png" alt="Nome da mulher">
+                    </a>
+                    <p class="nowrap">Nenhum selecionado...</p>
+               </div>
+          </div>
+          <div class="SessaoEscolha" id="LocalBotoes">
+               <button id="Template1" class="botao_mulher_base" style="display: none;">
+                    <img class="img_botao_base" src="/Assets/Tema Preto/logo.WIKISHE_MINIMIZE_temapreto.png" alt="">
+                    <span class="texto-botao_base nowrap"></span>
+               </button>
+          </div>
+     </main>
+     <script src="script.js"></script>
 </body>
+
 </html>

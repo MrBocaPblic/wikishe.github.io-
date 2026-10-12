@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.espaco1 {
+    position: relative;
+    background: linear-gradient(-90deg, hsl(267, 51%, 15%) 40%,hsl(267, 67%, 20%) 100%);
+    top: 40px;
+    padding: 10px;
+    width: 100%;
+    height: calc(100dvh - 40px);
+
+}
+/*  */
+
+/*  */
+
+.SessaoApresentacao {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    box-shadow: 5px 5px 40px rgb(18, 5, 34);
+    border-radius: 10px;
+    border: 2px solid #7216db65;
+    background: linear-gradient(90deg, hsl(261, 56%, 25%) 40%,hsla(267, 96%, 60%, 0.212) 100%);
+    padding: 20px;
+    width: 100%;
+    height: 70%;
+}
+
+.SessaoEscolha {
+    display: flex;
+    gap: 10px;
+    box-shadow: 5px 5px 40px rgb(18, 5, 34);
+    border-radius: 10px;
+    border: 2px solid #7216db65;
+    background: linear-gradient(90deg, hsl(261, 56%, 25%) 40%,hsla(267, 96%, 60%, 0.212) 100%);width: 100%;
+    margin-top: 10px;
+    height: calc(30% - 10px);
+}
+
+/*  */
+#INFO p{
+    display: flex;
+    font-size: 16px;
+    line-height: 1.6;
+}
+#INFO{
+    padding: 10px;
+    color: white;
+    width: 40%;
+    height: 100%;
+    border-radius: 10px;
+    border: 5px solid #181818;
+    background: radial-gradient(hsl(249, 47%, 29%) 0%,rgb(99, 99, 196) 100%);
+}
+
+#ImagemDaMulher{
+    float: left;
+    border: solid rgb(41, 41, 41) 2px;
+    background-color: black;
+    object-position: top;
+    object-fit: cover;
+    width: 30%;
+    height: 50%;
+
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+#globo-3d {
+    
+    border: 1px solid black;
+    border-radius: 15%;
+    left: 40px;
+    background: radial-gradient(hsl(271, 82%, 22%) 10%, rgb(64, 46, 112) 30%, rgba(14, 14, 15, 0.329) 70%);
+    width: 40%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.testclass{
+    align-content: center;
+}
+
+.botao_mulher_base{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    border: 0px solid #707070;
+    background-color: #181818;
+    width: 15%;
+    transition:linear;
+    transition-duration: 0.1s;
+}
+.botao_mulher_base:hover{
+    box-shadow: 0px 6px 12px;
+    background-color: hsl(268, 46%, 68%);
+    transition-duration: 0.1s;
+}
+.img_botao_base{
+    border:2px solid #1b152e;
+    display: flex;
+    align-self: center;
+    width: 100%;
+    height: 90%;
+    object-position: top;
+    object-fit: cover;
+}
+.texto-botao_base{
+    height: 10%;
+    text-align: center;
+    font-size: 1cqw;
+    border:2px solid #1b152e;
+    border-top: 0px;
+    background-color: rgb(64, 46, 112);
+    color: white;
+}
+
+#Localizacao{
+    padding: 1%;
+    font-size: 1cqw;
+    height: 70%;
+    width: 15%;
+    border: 1px solid black;
+    text-align: center;
+    color: white;
+}
+#Localizacao p {
+    text-align: start;
+}
+/* ponto brilhante siuii */
+
+.ponto-brilhante {
+    width: 14px;
+    height: 14px;
+    background-color: #ffcc00;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00;
+    cursor: pointer;
+    
+    /* Garante que o centro do elemento coincida exatamente com a coordenada */
+    position: relative;
+    transform: translate(-50%, -50%);
+    transform-origin: center center;
+    pointer-events: auto;
+    
+    animation: pulsarBrilho 1.5s infinite;
+}
+
+@keyframes pulsarBrilho {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.4);
+        opacity: 0.7;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+}

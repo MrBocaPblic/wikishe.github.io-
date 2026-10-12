@@ -1,0 +1,12 @@
+{
+     "visivel": true,
+     "nome": "Cleópatra",
+     "texto": "A última rainha da dinastia ptolemaica do Egito, Cleópatra foi uma líder política astuta, estrategista brilhante e poliglota, famosa por sua influência na política romana.",
+     "imagem": "/Assets/Imagens das mulheres/cleopatra.jpg.jpeg",
+     "localização": {
+          "lat": 31.2001,
+          "lng": 29.9187,
+          "Pais": "Egito",
+          "Cidade": "Alexandria"
+     }
+}

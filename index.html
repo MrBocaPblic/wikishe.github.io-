@@ -1,31 +1,38 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<!--Ao fazer href, use href="./Pasta/" use ./pasta/index.html se quiser especificar-->
+<!--Ao fazer href, use href="./Pasta/" use/(COMECE COM . e(ou) ./) ./pasta/index.html se quiser especificar-->
 <head>
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Document</title>
+     <title>WikiShe - Inicio</title>
      <link rel="icon" type="image/x-icon" href="logo_b.ico">
      <link rel="stylesheet" href="StyleSheet/layout.css">
-     <link rel="stylesheet" href="StyleSheet/MainPageStyle.css">
+     <link rel="stylesheet" href="MainPageStyle.css">
 </head>
 
 <body>
+     <!--(nota) BARRA DO TOPO (wikishe | inicio | descobrir | quiz | sobre ) -->
      <div class="TopBar">
-          <a href="/" class="Link_Logo">
+          <!--(nota) Logo interagivel (Leva direto pro site/inicio) -->
+          <a href="./" class="Link_Logo">
                <img id="TopBar_logoimg" src="Assets/Tema Branco/logo.WIKISHE_TEMABRANCO.png" alt="WikiShe">
           </a>
           <!-- <img id="TopBar_logoimg" src="Assets/Tema Branco/logo.WIKISHE_TEMABRANCO.png" alt="WikiShe"> -->
+          <!--(nota) Separador ( wikishe | inicio)  -->
           <div class="SeparadorVertical_TOPBAR"></div>
+          <!--(nota) Itens da barra do topo -->
           <div class="tobarItens">
-               <a href="#">Inicio</a>
+               <!--(nota) Altere os itens de direção para paginas aqui -->
+               <a href="./">Inicio</a>
                <a href="./Aprender/">Descobrir</a>
-               <a href="#">Quiz</a>
-               <a href="#">Sobre</a>
+               <a href="./Quiz/">Quiz</a>
+               <a href="#Sobre">Sobre</a>
           </div>
           <div class="SeparadorVertical_TOPBAR"></div>
      </div>
+     <!-- Todo o conteudo princpal, pode ser div, não precisa ser um main -->
      <main class="Conteudo">
+          <!-- O corpo principal da pagina -->
           <div class="SessaoPrincipal">
                <div class="SPRINCIPAL_DIREITA">
                     <h2 class="colorRoxoRosa font-siz" style="--tamanho: 10px">A importancia das mulheres na ciencia...</h2>
@@ -45,17 +52,20 @@
                     <img class="WSaleatorio" src="Assets/Tema Branco/logo.WIKISHE_variant1_formalapproach.png" alt="WS">
                </div>
           </div>
-
-          <div class="Footer">
+          <!--(nota) Lugar do rodapé -->
+          <div id="Sobre" class="Footer">
                <div class="FT1">
+                    <!--(nota) Imagens semi-obrigatorias ; Wikishe|ContaHospedeira|SiteHospedeiro -->
                     <img class="imgs_fotter" src="Assets/Tema Preto/a2.png" alt="WS_wikishe">
                     <img class="imgs_fotter" src="https://raw.githubusercontent.com/MrBocaPblic/MrBocaPblic/refs/heads/main/MrBoca.new.png" alt="Conta para a hospedagem">
                     <img class="imgs_fotter" src="https://avatars.githubusercontent.com/u/9919?s=200&v=4" alt="Serviço de hospedagem">
                     <div class="SeparadorVertical_FOOTER"></div>
                </div>
+               <!--(nota) Créditos  -->
                <div class="font-siz" style="--tamanho: 10px">
                     <ul class="FT2">
                          <h1 class="font-siz" style="--tamanho: 18px">Site Desenvolvido por</h1>
+                         <!--(nota) Lista de integrantes: -->
                          <li>Enzo Garica</li>
                          <li>Miguel Furlan</li>
                          <li>José Roberto</li>
