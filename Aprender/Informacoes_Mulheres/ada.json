@@ -2,7 +2,7 @@
      "visivel": true,
      "nome": "Ada Lovelace",
      "texto": "Considerada a primeira programadora da história, Ada Lovelace escreveu o primeiro algoritmo destinado a ser processado por uma máquina, a Máquina Analítica de Charles Babbage.",
-     "imagem": "/Assets/Imagens das mulheres/ada-lovelace.jpg.jpeg",
+     "imagem": "../Assets/Imagens das mulheres/ada-lovelace.jpg.jpeg",
      "localização": {
           "lat": 51.5074,
           "lng": -0.1278,

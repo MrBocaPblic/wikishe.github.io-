@@ -2,7 +2,7 @@
      "visivel": true,
      "nome": "Marie Curie",
      "texto": "Física e química pioneira, Marie Curie conduziu pesquisas pioneiras sobre a radioatividade. Foi a primeira mulher a ganhar um Prêmio Nobel e a única a vencer em duas áreas científicas diferentes.",
-     "imagem": "/Assets/Imagens das mulheres/marie-curie.jpg.jpeg",
+     "imagem": "../Assets/Imagens das mulheres/marie-curie.jpg.jpeg",
      "localização": {
           "lat": 52.2297,
           "lng": 21.0122,

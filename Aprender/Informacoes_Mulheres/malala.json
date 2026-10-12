@@ -2,7 +2,7 @@
      "visivel": true,
      "nome": "Malala Yousafzai",
      "texto": "Ativista paquistanesa e a mais jovem laureada com o Prêmio Nobel da Paz, Malala é uma defensora global do direito das mulheres e crianças à educação.",
-     "imagem": "/Assets/Imagens das mulheres/malala.jpg.jpeg",
+     "imagem": "../Assets/Imagens das mulheres/malala.jpg.jpeg",
      "localização": {
           "lat": 35.2227,
           "lng": 72.4258,
