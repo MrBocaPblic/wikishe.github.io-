@@ -2,57 +2,72 @@
 <html lang="pt-br">
 
 <head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>WikiShe - AprenderSobre</title>
-     <link rel="stylesheet" href="../StyleSheet/layout.css">
-     <link rel="stylesheet" href="AprenderPageStyle.css">
-     <link rel="icon" type="image/x-icon" href="../logo_b.ico">
-     <script src="https://unpkg.com/globe.gl"></script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WikiShe - Descobrir</title>
+    <link rel="icon" type="image/x-icon" href="../logo_ws.ico">
+    <link rel="stylesheet" href="../preset/defaultlayout.css">
+    <link rel="stylesheet" href="../preset/sel_layout.css">
+    <link rel="stylesheet" href="../preset/topbar.css">
+    <link rel="stylesheet" href="AprenderPageStyle.css">
 </head>
 
-<body>
-     <!-- BARRA DO TOPO (wikishe | inicio | descobrir | quiz | sobre ) -->
-     <div class="TopBar">
-          <a href="/" class="Link_Logo">
-               <img id="TopBar_logoimg" src="../Assets/Tema Branco/logo.WIKISHE_TEMABRANCO.png" alt="WikiShe">
-          </a>
-          <!-- <img id="TopBar_logoimg" src="Assets/Tema Branco/logo.WIKISHE_TEMABRANCO.png" alt="WikiShe"> -->
-          <div class="SeparadorVertical_TOPBAR"></div>
-          <div class="tobarItens">
-               <a href="../">Inicio</a>
-               <a href="../Aprender/">Descobrir</a>
-               <a href="../Quiz/">Quiz</a>
-          </div>
-          <div class="SeparadorVertical_TOPBAR"></div>
-     </div>
-     <main class="espaco1">
-          <div class="SessaoApresentacao">
-               <div id="globo-3d"></div>
-               <div class="nowrap" id="Localizacao">
-                    <p>Localização principal</p>
-                    <hr>
-                    <br>
-                    <p id="paissel">País:</p>
-                    <br>
-                    <p id="cidadesel">Cidade:</p>
-               </div>
-               <div id="INFO">
-                    <a href="#">
-                         <img id="ImagemDaMulher" height="100px" src="../Assets/Tema Preto/logo.WIKISHE_MINIMIZE_temapreto.png" alt="Nome da mulher">
-                    </a>
-                    <p class="nowrap">Nenhum selecionado...</p>
-               </div>
-          </div>
-          <div class="SessaoEscolha" id="LocalBotoes">
-               <button id="Template1" class="botao_mulher_base" style="display: none;">
-                    <img class="img_botao_base" src="../Assets/Tema Preto/logo.WIKISHE_MINIMIZE_temapreto.png" alt="">
-                    <span class="texto-botao_base nowrap"></span>
-               </button>
-          </div>
-     </main>
-     <script src="script.js"></script>
+<body class="__bodyadpt">
+    <div id="_TopbarSection_">
+        <a href="../" class="__topLogoLink">
+            <img id="_TopBarMainSiteLogo_" src="../AssetMidia/SiteLogo/Full/WikiShePreto.png" alt="WikiShe">
+        </a>
+        <div class="__topbarSeparador"></div>
+        <nav class="__topbarItens" aria-label="Navegação principal">
+            <a href="../">Inicio</a>
+            <a href="../Aprender/" aria-current="page">Descobrir</a>
+            <a href="../Quiz/">Quiz</a>
+        </nav>
+        <div class="__topbarSeparador"></div>
+    </div>
+
+    <main class="Conteudo">
+        <section class="explorador" aria-label="Conheça mulheres importantes">
+            <div class="painel-superior">
+                <article class="painel perfil painel-3d perfil-painel">
+                    <div class="perfil-conteudo">
+                        <div class="retrato-moldura">
+                            <img id="imagem-mulher" alt="" hidden>
+                            <span id="retrato-fallback" aria-hidden="true">WS</span>
+                        </div>
+                        <div class="perfil-dados">
+                            <p><strong>Nome:</strong> <span id="nome-mulher">Carregando…</span></p>
+                            <p><strong>Cidade:</strong> <span id="cidade-mulher">—</span></p>
+                            <p><strong>País:</strong> <span id="pais-mulher">—</span></p>
+                            <p><strong>Área:</strong> <span id="area-mulher">Sem informação</span></p>
+                        </div>
+                    </div>
+                </article>
+
+                <section class="globo-secao" aria-label="Localização">
+                    <div id="GloboGiratorio" role="img" aria-label="Globo terrestre com a localização marcada"></div>
+                    <p id="legenda-globo" aria-live="polite">Localização</p>
+                </section>
+
+                <article class="painel painel-3d informacoes-painel">
+                    <h2>Sobre</h2>
+                    <p id="texto-mulher" aria-live="polite">Carregando informações…</p>
+                </article>
+            </div>
+
+            <nav class="seletor" aria-label="Selecionar uma mulher">
+                <button class="seta" id="anterior" type="button" aria-label="Pessoas anteriores">‹</button>
+                <div class="trilho-moldura">
+                    <div id="botoes-mulheres" class="botoes-mulheres"></div>
+                </div>
+                <button class="seta" id="proximo" type="button" aria-label="Próximas pessoas">›</button>
+            </nav>
+            <p id="estado-carregamento" class="estado" aria-live="polite"></p>
+        </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

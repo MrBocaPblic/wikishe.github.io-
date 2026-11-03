@@ -1,0 +1,13 @@
+{
+     "visivel": true,
+     "area": "Matemática e cálculos para missões espaciais",
+     "nome": "Katherine Johnson",
+     "texto": "Katherine Johnson, nascida em 26 de agosto de 1918, em White Sulphur Springs, West Virginia, foi uma matemática e física que desempenhou um papel crucial na era da corrida espacial. Desde criança, mostrou habilidades matemáticas excepcionais, completando o ensino médio aos 14 anos e ingressando na Universidade Estadual da Virgínia, onde se formou em 1937. Johnson começou sua carreira na NACA (Comitê Nacional de Aeronáutica) em 1953, durante uma época em que a segregação racial ainda era uma realidade nos Estados Unidos. Ela trabalhava no Langley Research Center, onde era parte de um grupo de “calculadoras humanas”, mulheres que realizavam cálculos complexos à mão. O ambiente de trabalho era marcado por discriminação, mas Johnson superou esses desafios com seu talento e determinação. Johnson foi a primeira mulher a ser creditada em um relatório de pesquisa da NASA, e suas contribuições foram essenciais para várias missões espaciais, como por exemplo: Voo de Alan Shepard: Em 1961, ela calculou a trajetória do primeiro americano no espaço, Alan Shepard, em sua missão Mercury-Redstone 3. Voo de John Glenn: Em 1962, quando John Glenn estava prestes a fazer sua missão Mercury-Atlas 6, ele pediu que os cálculos de sua equipe fossem verificados por Johnson. Isso não só ressaltou sua habilidade, mas também a confiança que ele tinha em seu trabalho. Missão Apollo 11: Johnson foi fundamental no cálculo da trajetória de reentrada da Apollo 11, que levou Neil Armstrong e Buzz Aldrin à Lua em 1969. Sua precisão e atenção aos detalhes garantiram o sucesso da missão.",
+     "imagem": "/Assets/Imagens das mulheres/katherine.jpg",
+     "localização": {
+          "lat": 37.7940,
+          "lng": -80.3039,
+          "Pais": "Estados Unidos da América",
+          "Cidade": "White Sulphur Springs"
+     }
+}

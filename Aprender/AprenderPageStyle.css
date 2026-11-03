@@ -1,169 +1,373 @@
-* {
+:root {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #f5f5f5;
+    background: #252525;
+}
+
+body.__bodyadpt {
+    height: 100vh;
+    height: 100dvh;
+    overflow: hidden;
     margin: 0;
-    padding: 0;
+    padding-top: 40px;
     box-sizing: border-box;
+    background-color: #252525;
+    background-image: linear-gradient(rgba(22, 17, 27, 0.72), rgba(24, 11, 31, 0.78)), url("../old_use como ideia/Assets/Tema Branco/HuGGeENt6kGyixe3hT9tnY.jpg"), radial-gradient(ellipse at 50% 42%, #392166 0%, #24104a 46%, #160338 100%);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
-.espaco1 {
-    position: relative;
-    background: linear-gradient(-90deg, hsl(267, 51%, 15%) 40%,hsl(267, 67%, 20%) 100%);
-    top: 40px;
-    padding: 10px;
-    width: 100%;
+.Conteudo {
+    height: calc(100vh - 40px);
     height: calc(100dvh - 40px);
-
+    display: grid;
+    place-items: stretch;
+    padding: clamp(16px, 2.5vh, 30px) clamp(28px, 4vw, 64px);
+    box-sizing: border-box;
+    overflow: hidden;
 }
-/*  */
 
-/*  */
-
-.SessaoApresentacao {
-    display: flex;
-    align-items: center;
-    justify-content:space-between;
-    box-shadow: 5px 5px 40px rgb(18, 5, 34);
-    border-radius: 10px;
-    border: 2px solid #7216db65;
-    background: linear-gradient(90deg, hsl(261, 56%, 25%) 40%,hsla(267, 96%, 60%, 0.212) 100%);
-    padding: 20px;
+.explorador {
     width: 100%;
-    height: 70%;
-}
-
-.SessaoEscolha {
-    display: flex;
-    gap: 10px;
-    box-shadow: 5px 5px 40px rgb(18, 5, 34);
-    border-radius: 10px;
-    border: 2px solid #7216db65;
-    background: linear-gradient(90deg, hsl(261, 56%, 25%) 40%,hsla(267, 96%, 60%, 0.212) 100%);width: 100%;
-    margin-top: 10px;
-    height: calc(30% - 10px);
-}
-
-/*  */
-#INFO p{
-    display: flex;
-    font-size: 16px;
-    line-height: 1.6;
-}
-#INFO{
-    padding: 10px;
-    color: white;
-    width: 40%;
     height: 100%;
-    border-radius: 10px;
-    border: 5px solid #181818;
-    background: radial-gradient(hsl(249, 47%, 29%) 0%,rgb(99, 99, 196) 100%);
+    min-height: 0;
+    justify-self: center;
+    display: grid;
+    grid-template-rows: minmax(0, 1fr) auto auto;
 }
 
-#ImagemDaMulher{
-    float: left;
-    border: solid rgb(41, 41, 41) 2px;
-    background-color: black;
-    object-position: top;
-    object-fit: cover;
-    width: 30%;
-    height: 50%;
-
-    margin-right: 10px;
-    margin-bottom: 10px;
-}
-
-#globo-3d {
-    
-    border: 1px solid black;
-    border-radius: 15%;
-    left: 40px;
-    background: radial-gradient(hsl(271, 82%, 22%) 10%, rgb(64, 46, 112) 30%, rgba(14, 14, 15, 0.329) 70%);
-    width: 40%;
+.painel-superior {
+    min-height: 0;
     height: 100%;
-
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr) minmax(0, 1fr);
     align-items: center;
+    gap: clamp(8px, 1.5vw, 24px);
+    perspective: 1000px;
 }
 
-.testclass{
-    align-content: center;
+.painel-3d {
+    min-width: 0;
+    min-height: 0;
+    height: min(82vh, 100%);
+    height: min(82dvh, 100%);
+    box-sizing: border-box;
+    padding: clamp(12px, 1.5vw, 24px);
+    border: 2px solid rgba(99, 92, 129, 0.54);
+    border-radius: 4px;
+    background: #1c0d36;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.36), inset 0 0 10px rgba(215, 203, 236, 0.07);
 }
 
-.botao_mulher_base{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    border: 0px solid #707070;
-    background-color: #181818;
-    width: 15%;
-    transition:linear;
-    transition-duration: 0.1s;
+.perfil-painel {
+    transform: perspective(1000px) rotateY(6deg);
+    transform-origin: right center;
 }
-.botao_mulher_base:hover{
-    box-shadow: 0px 6px 12px;
-    background-color: hsl(268, 46%, 68%);
-    transition-duration: 0.1s;
+
+.informacoes-painel {
+    min-height: 0;
+    max-height: none;
+    overflow: auto;
+    transform: perspective(1000px) rotateY(-6deg);
+    transform-origin: left center;
 }
-.img_botao_base{
-    border:2px solid #1b152e;
-    display: flex;
-    align-self: center;
+
+.perfil-conteudo {
+    min-height: 0;
+    display: grid;
+    grid-template-columns: minmax(90px, 0.9fr) minmax(125px, 1.1fr);
+    align-items: center;
+    gap: 18px;
+}
+
+.retrato-moldura {
+    height: 172px;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    border: 1px solid #a78ada;
+    background: linear-gradient(145deg, #087bd5, #064c9d);
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.retrato-moldura img {
     width: 100%;
-    height: 90%;
-    object-position: top;
+    height: 100%;
     object-fit: cover;
 }
-.texto-botao_base{
-    height: 10%;
-    text-align: center;
-    font-size: 1cqw;
-    border:2px solid #1b152e;
-    border-top: 0px;
-    background-color: rgb(64, 46, 112);
-    color: white;
+
+.perfil-dados p {
+    margin: 0 0 12px;
+    line-height: 1.45;
+    overflow-wrap: anywhere;
 }
 
-#Localizacao{
-    padding: 1%;
-    font-size: 1cqw;
-    height: 70%;
-    width: 15%;
-    border: 1px solid black;
-    text-align: center;
-    color: white;
+.perfil-dados strong {
+    display: block;
+    color: #bda6f7;
+    font-size: 0.76rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
 }
-#Localizacao p {
-    text-align: start;
-}
-/* ponto brilhante siuii */
 
-.ponto-brilhante {
-    width: 14px;
-    height: 14px;
-    background-color: #ffcc00;
-    border-radius: 50%;
-    box-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00;
-    cursor: pointer;
-    
-    /* Garante que o centro do elemento coincida exatamente com a coordenada */
+.perfil-dados span {
+    font-size: 0.98rem;
+}
+
+.informacoes-painel h2 {
+    margin: 0 0 14px;
+    color: #d4c1ff;
+    font-size: 1.15rem;
+}
+
+.informacoes-painel p {
+    margin: 0;
+    line-height: 1.75;
+    white-space: pre-line;
+}
+
+.globo-secao {
+    min-width: 0;
+    display: grid;
+    justify-items: center;
+    text-align: center;
+}
+
+#GloboGiratorio {
+    width: min(100%, 56vh, 56vw);
+    width: min(100%, 56dvh, 56vw);
+    aspect-ratio: 1;
     position: relative;
-    transform: translate(-50%, -50%);
-    transform-origin: center center;
-    pointer-events: auto;
-    
-    animation: pulsarBrilho 1.5s infinite;
+    overflow: hidden;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 30%, #7956bb, #241344 68%, transparent 74%);
+    filter: drop-shadow(0 12px 18px rgba(0, 0, 0, 0.35));
 }
 
-@keyframes pulsarBrilho {
-    0% {
-        transform: translate(-50%, -50%) scale(1);
-        opacity: 1;
+#GloboGiratorio canvas {
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+}
+
+#legenda-globo {
+    min-height: 1.5em;
+    margin: 10px 0 0;
+    color: #e2e0e6;
+    font-weight: 600;
+}
+
+.seletor {
+    --card-height: clamp(76px, 7.5vw, 96px);
+    --card-pad: 5px;
+    min-height: 0;
+    margin-top: clamp(20px, 3vh, 34px);
+    padding: 0;
+    display: grid;
+    grid-template-columns: 54px minmax(0, 1fr) 54px;
+    align-items: center;
+    gap: 14px;
+}
+
+.trilho-moldura {
+    position: relative;
+    min-width: 0;
+    height: calc(var(--card-height) + var(--card-pad) * 2 + 2px);
+    overflow: hidden;
+}
+
+.trilho-moldura::before,
+.trilho-moldura::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    clip-path: polygon(10% 0, 90% 0, 100% 100%, 0 100%);
+}
+
+.trilho-moldura::before {
+    background: #a68bf8;
+}
+
+.trilho-moldura::after {
+    inset: 1px;
+    background: linear-gradient(110deg, #2b1854, #463078 50%, #2b1854);
+}
+
+.botoes-mulheres {
+    position: absolute;
+    z-index: 1;
+    inset: var(--card-pad) 8%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0 4px;
+    scrollbar-width: thin;
+    scrollbar-color: #f0edf4 #514b59;
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 9%, #000 91%, transparent);
+    mask-image: linear-gradient(to right, transparent, #000 9%, #000 91%, transparent);
+}
+
+.botao-mulher,
+.seta {
+    border: 1px solid #aaa2b5;
+    color: #f4f1f7;
+    background: #4a4059;
+    cursor: pointer;
+    font: inherit;
+    transition: background-color 140ms ease, color 140ms ease, transform 140ms ease, border-color 140ms ease;
+}
+
+.botao-mulher {
+    flex: 0 0 96px;
+    height: var(--card-height);
+    padding: 0;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: calc(var(--card-height) * 0.69) minmax(0, 1fr);
+    text-align: center;
+}
+
+.botao-retrato {
+    position: relative;
+    width: 100%;
+    height: calc(var(--card-height) * 0.69);
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    background: linear-gradient(145deg, #168fe8, #07539e);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.botao-retrato img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.botao-nome {
+    min-width: 0;
+    align-self: center;
+    padding: 2px 4px;
+    overflow: hidden;
+    font-size: 0.67rem;
+    line-height: 1.15;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.botao-mulher:hover,
+.seta:hover {
+    border-color: #e2dce9;
+    background: #5b4d70;
+}
+
+.botao-mulher[aria-pressed="true"] {
+    border: 2px solid #e3d9ef;
+    background: #594778;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+.botao-mulher:active,
+.seta:active {
+    transform: scale(0.96);
+}
+
+.seta {
+    z-index: 2;
+    width: 48px;
+    height: 48px;
+    justify-self: center;
+    border-width: 1px;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 2.2rem;
+    line-height: 1;
+}
+
+.estado {
+    min-height: 1.4em;
+    margin: 8px 0 0;
+    text-align: center;
+    color: #cdb9ff;
+}
+
+@media (max-width: 850px) {
+    body.__bodyadpt {
+        height: auto;
+        min-height: 100vh;
+        overflow: auto;
     }
-    50% {
-        transform: translate(-50%, -50%) scale(1.4);
-        opacity: 0.7;
+
+    .Conteudo {
+        height: auto;
+        min-height: calc(100vh - 40px);
+        overflow: visible;
+        padding: 18px 24px;
     }
-    100% {
-        transform: translate(-50%, -50%) scale(1);
-        opacity: 1;
+
+    .explorador { height: auto; display: block; }
+
+    .painel-superior {
+        grid-template-columns: 1fr;
+        height: auto;
+        gap: 18px;
     }
+
+    .painel-3d {
+        min-height: 210px;
+        height: auto;
+        transform: none;
+    }
+
+    .perfil-conteudo {
+        min-height: 170px;
+    }
+
+    .retrato-moldura {
+        height: 150px;
+    }
+
+    #GloboGiratorio {
+        width: min(76vw, 440px);
+    }
+
+    .informacoes-painel {
+        max-height: 50vh;
+    }
+
+    .seletor {
+        grid-template-columns: 42px minmax(0, 1fr) 42px;
+        gap: 6px;
+        margin-top: 24px;
+    }
+
+    .seta {
+        width: 38px;
+        height: 44px;
+    }
+
+    .botoes-mulheres {
+        justify-content: flex-start;
+        inset-inline: 5%;
+    }
+
+    .perfil-painel,
+    .informacoes-painel { transform: none; }
+}
+
+@media (max-width: 520px) {
+    .seletor { --card-height: 76px; }
+    .botao-mulher { flex-basis: 82px; }
 }

@@ -1,76 +1,131 @@
-.SessaoPrincipal{
-     background-color: #6e6e6e;
-     height: 800px;
+.__bodyadpt {
+    background-color: #160338;
+    min-height: calc(100vh - 40px);
+    display: flex;
+    flex-direction: column;
 }
 
-/* Sessao Principal */
-.SPRINCIPAL_DIREITA {
-     padding: 20px 30px;
-     background-color:gainsboro;
-     width: calc(35%);
-     height: 100%;
+.Conteudo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
-/* Sessao do rodape */
-.Footer{
-     padding: 10px 20px;
-     display: flex;
-     align-items: center;
-     justify-content:space-between;
-     border-top:1px solid #321b51;
-     background-color:#452a61;
-     height: 120px;
-}
-.SeparadorVertical_FOOTER{
-     background-color: #0201023e;
-     height: calc(100% - 25px);
-     width: 1px;
-     margin-left: 10px;
-}
-.imgs_fotter{
-     height: 50px;
-     width: auto;
-     object-fit: contain;
+.SessaoPrincipal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    flex: 1;
+    min-height: 800px;
 }
 
-/*  */
-.FT1{
-     display: flex;
-     align-items: center;
-     height: 100%;
-}
-.FT2{
-     color: white;
-     margin: 0px;
-     padding: 10px;
-     display: flex;
-     flex-direction: column;
-     list-style: none;
-     align-items: center;
-     height: 100%;
+.SPRINCIPAL {
+    /* Removido o justify-content daqui, pois ele só funciona no elemento pai */
+    box-shadow: 0px 0px 40px 14px black;
+    text-align: center;
+    padding: 20px 30px;
+    background: linear-gradient(180deg, rgb(252, 252, 255), rgb(202, 191, 222));
+    width: 45%;
+    /* Simplificado de calc(35%) para 35% */
+    height: 80%;
 }
 
-#Para_Aprender{
-     border-radius: 40px;
-     text-decoration: none;
-     color: white;
-     background-color: #755399;
-     padding: 10px;
-     white-space: nowrap;
+.Sessaoprincipal_tamanhos {
+    font-size: 20px;
+    font-weight: 400;
 }
-#Para_Aprender:hover{
-     transition-duration: .2s;
-     color: white;
-     background-color: #895bba;
+
+.Footer {
+    flex-shrink: 0;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #343434;
+    background-color: hsl(260, 40%, 30%);
+    height: 120px;
 }
+
+.FooterImages {
+    --scale: 1;
+    --transition-duration: 200ms;
+    scale: var(--scale);
+    transition:
+        scale var(--transition-duration) ease-in-out;
+
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+}
+
+.FooterImages:hover {
+    --scale: 1.1;
+}
+
+.FooterImages:active {
+    --transition-duration: 100ms;
+    --scale: 0.5;
+}
+
+.FT1>a:nth-child(2n) img {
+    margin-bottom: 40px;
+}
+
+.lti{
+    color: rgb(56, 56, 56);
+}
+.creditos1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+#container-imagens {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    /* Cria colunas automáticas baseadas no tamanho fixo de 120px */
+    grid-template-columns: repeat(auto-fill, 120px);
+    grid-auto-rows: 120px;
+    /* Força todas as linhas a terem exatamente 120px de altura */
+    justify-content: center;
+    /* Centraliza o mosaico na tela */
+    gap: 8px;
+    padding: 8px;
+    box-sizing: border-box;
+    z-index: -1;
+    /* Joga as imagens para o fundo, atrás do seu quiz */
+    overflow: hidden;
+    opacity: 0.85;
+}
+
+#container-imagens img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 6px;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#Para_Aprender {
+    border: 1px solid rgba(0, 0, 0, 0.216);
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    background: linear-gradient(rgb(77, 53, 134), rgb(166, 139, 248));
+    transition: all linear;
+}
+
+#Para_Aprender:hover {
+    background: linear-gradient(hsl(258, 53%, 17%), hsl(255, 89%, 66%));
+}
+
 #Para_Aprender:active{
-     transition-duration: .2s;
-     color: white;
-     background-color: #4d316a;
-}
-
-.WSaleatorio{
-     height: 400px;
-     width: 100%;
-     object-fit: contain;
+    padding: 8px;
+   background: linear-gradient(hsl(258, 23%, 17%), hsl(255, 39%, 66%)); 
 }

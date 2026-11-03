@@ -1,0 +1,20 @@
+.__setInit_Image {
+    height: var(--init_ImageHeightSize);
+    width: var(--init_ImageHeightSize);
+    object-fit: contain;
+}
+
+.__setTextNowragp {
+    word-wrap: break-word;
+    /* Quebra palavras longas para caber na largura */
+    overflow-wrap: break-word;
+    /* Versão moderna do word-wrap */
+    word-break: break-word;
+}
+
+.__styleListnone {
+    padding-left: 0px;
+    list-style: none;
+}
+
+.___________________ {}

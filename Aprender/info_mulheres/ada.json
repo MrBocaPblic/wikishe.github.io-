@@ -1,0 +1,13 @@
+{
+     "visivel": true,
+     "area": "Pioneira da programação e da computação",
+     "nome": "Ada Lovelace",
+     "texto": "Augusta Ada Byron King  - a Condessa de Lovelace - foi uma matemática e escritora que viveu na Inglaterra no século XIX. Filha do famoso poeta Lord Byron, Ada foi responsável por uma revolução no campo das ciências exatas, sendo reconhecida como a primeira programadora, ou seja, a primeira a inventar um algoritmo processado por uma máquina. Ada Lovelace nasceu no dia 10 de dezembro de 1815, em Londres, na Inglaterra. Conta-se que seu pai, o poeta romântico Lord Byron, não ficou satisfeito com o fato de ter uma filha menina. Sua mãe, Anne Isabella Byron, era uma nobre cientista e criou a filha sem a presença de Byron, que pediu a separação quando a garota tinha 2 meses de idade e logo se mudou de país. Assim, Ada cresce sob os cuidados da mãe e da avó materna. Desde cedo Ada é incentivada pela mãe a desenvolver o pensamento lógico e matemático, num esforço de mantê-la ocupada e com a saúde mental e psicológica equilibrada, diferente de seu pai. Inventiva e inteligente, aos 12 anos Ada desenha um pássaro mecânico capaz de bater asas. Desenho que é publicado no livro Flyology (com tradução para Estudo do voo), onde compila seus estudos e ideias. Suas habilidades na matemática se tornaram evidentes aos 17 anos. Uma figura de fundamental importância para Ada foi a também cientista Mary Sommerville, que se torna amiga e tutora.",
+     "imagem": "ada-lovelace.jpg.jpeg",
+     "localização": {
+          "lat": 51.5074,
+          "lng": -0.1278,
+          "Pais": "Reino Unido",
+          "Cidade": "Londres"
+     }
+}

@@ -1,0 +1,13 @@
+{
+     "visivel": true,
+     "area": "Física e química",
+     "nome": "Marie Curie",
+     "texto": "Caçula de cinco irmãos, Maria Salomea Sklodowski nasceu em 7 de novembro de 1867 perto da antiga Varsóvia. Adquiriu o gosto pelos estudos através de seus pais que eram ambos professores. Se formou em escola pública, passando a trabalhar como governanta para ajudar a família a custear os estudos da irmã Bronia Sklodowski. Em 1891 se muda para Paris onde se licencia em Física e Matemática na faculdade de Sorbonne. Em 1895 casou-se com Pierre Curie, passando a ser conhecida como Marie Curie. Junto de seu marido Marie fez relevantes pesquisas sobre elementos químicos que classificou como “radioactivos”. Marie Curie descobriu o elemento rádio que posteriormente passou a ser utilizado em tratamentos de radioterapia. Em 1903 defende o seu doutoramento, no mesmo ano é agraciada com o prêmio Nobel de Física junto com seu marido Pierre e Henry Becquerel, pela investigação do fenômeno da radioactividade. Foi a primeira mulher a ser agraciada com o prêmio. Depois da morte trágica de seu marido em 1906 assume a sua cadeira como professora na Escola de Física de Sorbonne, a primeira mulher em tal posto da instituição. É novamente agraciada com o prêmio Nobel, desta vez de Química, por suas pesquisas com os elementos rádio e polónio. Durante a primeira guerra mundial empenhou com a assistência aos feridos, ajudou a difundir a radiologia móvel nos campos de batalha. Em 1918 fundou o Instituto Rádio da Universidade de Paris, que se consagrou como um centro de referências nos estudos de física nuclear e química. Foi admitida como membro honorário da Academia Nacional de Medicina em 15 de julho de 1926. Apesar do imenso legado, a vida de Marie Curie foi marcada pelo preconceito de gênero, xenofobia e ataque à ciência. Faleceu em 4 de julho de 1943, de leucemia, provavelmente vítima da exposição à radioatividade a que tanto se dedicou.",
+     "imagem": "marie-curie.jpg.jpeg",
+     "localização": {
+          "lat": 52.2297,
+          "lng": 21.0122,
+          "Pais": "Polônia",
+          "Cidade": "Varsóvia"
+     }
+}

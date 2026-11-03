@@ -1,8 +1,9 @@
 {
      "visivel": true,
+     "area": "Pintura e autorretratos",
      "nome": "Frida Kahlo",
      "texto": "Renomada pintora mexicana, Frida Kahlo é mundialmente famosa por suas obras intensas e sinceras, marcadas por autorretratos que exploravam identidade, dor e a cultura do México.",
-     "imagem": "../Assets/Imagens das mulheres/frida-kahlo.jpg.jpeg",
+     "imagem": "frida-kahlo.jpg.jpeg",
      "localização": {
           "lat": 19.4326,
           "lng": -99.1332,
