@@ -21,6 +21,7 @@
 }
 
 .SPRINCIPAL {
+    border-radius: 6px;
     /* Removido o justify-content daqui, pois ele sÃ³ funciona no elemento pai */
     box-shadow: 0px 0px 40px 14px black;
     text-align: center;
