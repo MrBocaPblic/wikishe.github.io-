@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,27 +10,68 @@
     <link rel="stylesheet" href="../preset/topbar.css">
     <link rel="stylesheet" href="QuizPageStyle.css">
 </head>
-
 <body class="__bodyadpt modbody">
-
-    <!-- Container de imagens no fundo -->
-    <div id="container-imagens"></div>
-
-    <!-- Barra do Topo -->
-    <div id="_TopbarSection_">
-        <a href="./" class="__topLogoLink">
+    <header id="_TopbarSection_">
+        <a href="../" class="__topLogoLink">
             <img id="_TopBarMainSiteLogo_" src="../AssetMidia/SiteLogo/Full/WikiShePreto.png" alt="WikiShe">
         </a>
         <div class="__topbarSeparador"></div>
-        <div class="__topbarItens">
-            <a href="../">Inicio</a>
+        <nav class="__topbarItens" aria-label="Navegação principal">
+            <a href="../">Início</a>
             <a href="../Aprender/">Descobrir</a>
-            <a href="../Quiz/">Quiz</a>
-        </div>
+            <a href="../Quiz/" aria-current="page">Quiz</a>
+        </nav>
         <div class="__topbarSeparador"></div>
-    </div>
-    <main class="Conteudo">
+    </header>
 
+    <main class="Conteudo">
+        <h1 class="quiz-titulo">QUIZ SOBRE AS MULHERES:</h1>
+        <hr class="quiz-separador">
+        <section class="quiz-app" aria-label="Quiz sobre mulheres">
+            <section class="tela tela-inicio" id="tela-inicio">
+                <p class="sobretitulo">WIKISHE · QUIZ</p>
+                <h1>Vamos ver o que você aprendeu?</h1>
+                <p class="descricao">Responda às perguntas sobre mulheres que fizeram história.</p>
+                <label class="campo-quantidade" for="quantidade-perguntas">
+                    Quantas perguntas?
+                    <select id="quantidade-perguntas" disabled>
+                        <option value="5">5 perguntas</option>
+                        <option value="10">10 perguntas</option>
+                        <option value="all">Todas</option>
+                    </select>
+                </label>
+                <p class="aviso-dados" id="aviso-dados" role="status">Carregando perguntas…</p>
+                <button class="botao botao-principal" id="iniciar-quiz" type="button" disabled>Começar</button>
+            </section>
+
+            <section class="tela tela-pergunta" id="tela-pergunta" hidden>
+                <div class="progresso-cabecalho">
+                    <span id="contador-pergunta">Pergunta 1 de 5</span>
+                    <span id="pontuacao-atual">Acertos: 0</span>
+                </div>
+                <div class="barra-progresso" role="progressbar" aria-label="Progresso do quiz" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                    <span id="progresso-preenchido"></span>
+                </div>
+                <p class="tipo-resposta" id="tipo-resposta"></p>
+                <h1 class="enunciado" id="enunciado-pergunta"></h1>
+                <div class="lista-respostas" id="lista-respostas"></div>
+                <div class="feedback" id="feedback-resposta" role="status" aria-live="polite" hidden></div>
+                <div class="acoes-pergunta">
+                    <button class="botao botao-secundario" id="sair-quiz" type="button">Sair</button>
+                    <button class="botao botao-principal" id="confirmar-resposta" type="button">Confirmar resposta</button>
+                    <button class="botao botao-principal" id="proxima-pergunta" type="button" hidden>Próxima</button>
+                </div>
+            </section>
+
+            <section class="tela tela-resultado" id="tela-resultado" hidden>
+                <p class="sobretitulo">QUIZ CONCLUÍDO</p>
+                <h1 id="titulo-resultado">Muito bem!</h1>
+                <p class="pontuacao-final" id="pontuacao-final"></p>
+                <p class="descricao" id="mensagem-resultado"></p>
+                <button class="botao botao-principal" id="refazer-quiz" type="button">Jogar novamente</button>
+            </section>
+        </section>
     </main>
+    <script src="QuizPageScript.js"></script>
 </body>
 </html>

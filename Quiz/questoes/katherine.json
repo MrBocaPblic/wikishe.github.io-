@@ -1,0 +1,12 @@
+﻿{
+  "pergunta": "Qual astronauta pediu que Katherine Johnson conferisse os cálculos de sua missão Mercury?",
+  "MultiSelect": false,
+  "respostas_corretas": [
+    "John Glenn"
+  ],
+  "respostas_erradas": [
+    "Alan Shepard",
+    "Neil Armstrong",
+    "Buzz Aldrin"
+  ]
+}

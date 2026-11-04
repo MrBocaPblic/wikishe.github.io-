@@ -1,0 +1,12 @@
+﻿{
+  "pergunta": "Que estrutura do DNA foi apoiada pelas imagens de difração de raios X estudadas por Rosalind Franklin?",
+  "MultiSelect": false,
+  "respostas_corretas": [
+    "A dupla hélice"
+  ],
+  "respostas_erradas": [
+    "Uma hélice simples",
+    "Uma cadeia circular",
+    "Uma hélice tripla"
+  ]
+}

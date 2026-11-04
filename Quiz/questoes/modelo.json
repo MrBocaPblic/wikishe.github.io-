@@ -1,0 +1,14 @@
+{
+     "pergunta": "Talpergunta tal?",
+     "MultiSelect": false, 
+     "respostas_corretas":[
+          "resposta",
+          "razão"
+     ],
+     "respostas_erradas":[
+          "batidão",
+          "evacuação",
+          "murmuração",
+          "explosão"
+     ]
+}

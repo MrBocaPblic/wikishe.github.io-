@@ -1,0 +1,12 @@
+﻿{
+  "pergunta": "Quais eram as principais áreas de estudo de Hipátia, segundo o perfil?",
+  "MultiSelect": false,
+  "respostas_corretas": [
+    "Matemática e astronomia"
+  ],
+  "respostas_erradas": [
+    "Física e química",
+    "Programação e computação",
+    "Química e estrutura do DNA"
+  ]
+}

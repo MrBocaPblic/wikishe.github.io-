@@ -1,0 +1,12 @@
+﻿{
+  "pergunta": "Qual linguagem de programação Grace Hopper ajudou a desenvolver?",
+  "MultiSelect": false,
+  "respostas_corretas": [
+    "COBOL"
+  ],
+  "respostas_erradas": [
+    "Mark I",
+    "UNIVAC",
+    "NACA"
+  ]
+}

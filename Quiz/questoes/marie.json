@@ -1,0 +1,12 @@
+﻿{
+  "pergunta": "Qual prêmio Marie Curie recebeu em 1903 junto com Pierre Curie e Henri Becquerel?",
+  "MultiSelect": false,
+  "respostas_corretas": [
+    "Prêmio Nobel de Física"
+  ],
+  "respostas_erradas": [
+    "Prêmio Nobel de Química",
+    "Prêmio Nobel da Paz",
+    "Medalha Fields"
+  ]
+}

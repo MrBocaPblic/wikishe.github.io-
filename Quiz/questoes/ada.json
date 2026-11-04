@@ -1,0 +1,12 @@
+﻿{
+  "pergunta": "Qual foi a principal contribuição de Ada Lovelace para a computação?",
+  "MultiSelect": false,
+  "respostas_corretas": [
+    "Escreveu um algoritmo que poderia ser processado por uma máquina."
+  ],
+  "respostas_erradas": [
+    "Ajudou a criar a linguagem COBOL para computadores.",
+    "Conferiu os cálculos da missão Mercury de John Glenn.",
+    "Usou raios X para revelar a estrutura do DNA."
+  ]
+}

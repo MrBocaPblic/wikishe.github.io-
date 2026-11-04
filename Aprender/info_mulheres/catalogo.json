@@ -1,12 +1,8 @@
-[
-    "ada.json",
-    "cleopatra.json",
-    "frida.json",
-    "grace.json",
-    "hipatia.json",
-    "joana.json",
-    "katherine.json",
-    "malala.json",
-    "marie.json",
-    "rosalind.json"
+﻿[
+  "ada.json",
+  "grace.json",
+  "hipatia.json",
+  "katherine.json",
+  "marie.json",
+  "rosalind.json"
 ]

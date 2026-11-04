@@ -1,4 +1,4 @@
-.__bodyadpt {
+﻿.__bodyadpt {
     background-color: #160338;
     min-height: calc(100vh - 40px);
     display: flex;
@@ -21,7 +21,7 @@
 }
 
 .SPRINCIPAL {
-    /* Removido o justify-content daqui, pois ele só funciona no elemento pai */
+    /* Removido o justify-content daqui, pois ele sÃ³ funciona no elemento pai */
     box-shadow: 0px 0px 40px 14px black;
     text-align: center;
     padding: 20px 30px;
@@ -88,17 +88,17 @@
     width: 100vw;
     height: 100vh;
     display: grid;
-    /* Cria colunas automáticas baseadas no tamanho fixo de 120px */
+    /* Cria colunas automÃ¡ticas baseadas no tamanho fixo de 120px */
     grid-template-columns: repeat(auto-fill, 120px);
     grid-auto-rows: 120px;
-    /* Força todas as linhas a terem exatamente 120px de altura */
+    /* ForÃ§a todas as linhas a terem exatamente 120px de altura */
     justify-content: center;
     /* Centraliza o mosaico na tela */
     gap: 8px;
     padding: 8px;
     box-sizing: border-box;
     z-index: -1;
-    /* Joga as imagens para o fundo, atrás do seu quiz */
+    /* Joga as imagens para o fundo, atrÃ¡s do seu quiz */
     overflow: hidden;
     opacity: 0.85;
 }
@@ -129,3 +129,4 @@
     padding: 8px;
    background: linear-gradient(hsl(258, 23%, 17%), hsl(255, 39%, 66%)); 
 }
+

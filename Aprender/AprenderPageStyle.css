@@ -1,4 +1,4 @@
-:root {
+﻿:root {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #f5f5f5;
     background: #252525;
@@ -204,7 +204,7 @@ body.__bodyadpt {
     inset: var(--card-pad) 8%;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     gap: 12px;
     overflow-x: auto;
     overflow-y: hidden;
@@ -371,3 +371,5 @@ body.__bodyadpt {
     .seletor { --card-height: 76px; }
     .botao-mulher { flex-basis: 82px; }
 }
+
+
