@@ -1,4 +1,4 @@
-﻿document.addEventListener('DOMContentLoaded', async function () {
+document.addEventListener('DOMContentLoaded', async function () {
     function buscar(seletor) {
         return document.querySelector(seletor);
     }
@@ -102,6 +102,8 @@
     }
 
     // Converte coordenadas em posição na esfera e aponta o local para a câmera.
+
+
     function marcarLocal(local) {
         if (!marcador) return;
 
@@ -110,20 +112,33 @@
             return;
         }
 
+        // Converte latitude e longitude para radianos
         const latitude = Number(local.lat) * Math.PI / 180;
         const longitude = Number(local.lng) * Math.PI / 180;
+
         const raio = 2.035;
 
-        marcador.position.set(
-            -raio * Math.cos(latitude) * Math.sin(longitude),
-            raio * Math.sin(latitude),
-            raio * Math.cos(latitude) * Math.cos(longitude)
-        );
+        // Coordenadas compatíveis com a SphereGeometry do Three.js
+        const x = raio * Math.cos(latitude) * Math.cos(longitude);
+        const y = raio * Math.sin(latitude);
+        const z = -raio * Math.cos(latitude) * Math.sin(longitude);
+
+        marcador.position.set(x, y, z);
         marcador.visible = true;
 
+        // Calcula a rotação necessária para apontar o local para a câmera
         const direcao = marcador.position.clone().normalize();
-        orientacaoAlvo.setFromUnitVectors(direcao, new THREE.Vector3(0, 0, 1));
+
+        orientacaoAlvo.setFromUnitVectors(
+            direcao,
+            new THREE.Vector3(0, 0, 1)
+        );
     }
+
+
+
+
+
 
     function caminhoDaImagem(valor) {
         if (!valor) return '';
