@@ -10,9 +10,8 @@
 const fundo = document.getElementById('container-imagens');
 const tamanhoImagem = 120;
 const passoDaGrade = 128;
-const movimentoReduzido = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-// Monta fotos suficientes para a tela e para o trecho que o parallax vai percorrer.
+// Monta fotos suficientes para a tela e para o trecho que o parallax percorre.
 function montarFundo() {
     if (!fundo) return;
 
@@ -42,20 +41,24 @@ function montarFundo() {
 // Move o mosaico a 60% da velocidade da página para criar o efeito de distância.
 function moverFundo() {
     if (!fundo) return;
-
     fundo.style.transform = 'translateY(' + (-window.scrollY * 0.6) + 'px)';
 }
 
-// Troca algumas fotos por outras sem reconstruir todo o mosaico.
+// Troca vários quadrados por fotos diferentes a cada ciclo.
 function trocarAlgumasFotos() {
-    if (!fundo || movimentoReduzido) return;
+    if (!fundo) return;
 
     const fotos = fundo.querySelectorAll('.img-animada');
-    const quantidade = Math.max(3, Math.ceil(fotos.length * 0.04));
+    const quantidade = Math.min(fotos.length, Math.max(6, Math.ceil(fotos.length * 0.12)));
+    const indicesTrocados = [];
 
-    for (let i = 0; i < quantidade; i += 1) {
-        const indiceAleatorio = Math.floor(Math.random() * fotos.length);
-        const foto = fotos[indiceAleatorio];
+    while (indicesTrocados.length < quantidade) {
+        const indice = Math.floor(Math.random() * fotos.length);
+
+        if (indicesTrocados.indexOf(indice) !== -1) continue;
+        indicesTrocados.push(indice);
+
+        const foto = fotos[indice];
         const nomeAtual = foto.src.split('/').pop();
         let novoIndice = Math.floor(Math.random() * imagens.length);
 
@@ -79,16 +82,27 @@ window.addEventListener('load', function () {
     montarFundo();
     moverFundo();
 });
-window.setInterval(trocarAlgumasFotos, 3000);
+function agendarProximaTroca() {
+    const tempoMinimo = 1200;
+    const tempoMaximo = 4200;
+    const espera = Math.floor(Math.random() * (tempoMaximo - tempoMinimo + 1)) + tempoMinimo;
+
+    window.setTimeout(function () {
+        trocarAlgumasFotos();
+        agendarProximaTroca();
+    }, espera);
+}
+
+agendarProximaTroca();
 
 /*
  * Guia do fundo:
- * - A lista imagens contém somente as seis mulheres que continuam no site.
- * - montarFundo calcula quantas fotos cabem e cria a grade para cobrir a tela
- *   durante a rolagem; ao redimensionar, ajusta o número de fotos.
- * - moverFundo desloca as imagens a 60% da velocidade da página. Assim, o
- *   conteúdo parece passar mais rápido que o fundo, criando o efeito parallax.
- * - Os eventos scroll, resize e load movem o fundo ou recalculam a grade.
- * - trocarAlgumasFotos escolhe alguns quadrados e troca cada foto por outra a
- *   cada três segundos. A preferência por movimento reduzido pausa essas trocas.
+ * - A lista imagens guarda os retratos que aparecem no mosaico.
+ * - montarFundo cria ou remove quadrados conforme o tamanho da janela e do
+ *   trecho de página que pode rolar.
+ * - moverFundo posiciona as fotos a 60% da velocidade do conteúdo.
+ * - trocarAlgumasFotos escolhe quadrados diferentes e troca cada arquivo por
+ *   uma imagem distinta. O número muda conforme o tamanho da grade.
+ * - Os eventos scroll, resize e load movem o fundo ou ajustam sua grade. O agendador escolhe um intervalo aleatório entre 1,2 e 4,2 segundos.
  */
+
